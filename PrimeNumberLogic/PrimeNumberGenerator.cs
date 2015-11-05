@@ -12,7 +12,9 @@ namespace PrimeNumberLogic
         //generates prime numbers
         public int[] GetNumbers(uint numberToGet)
         {
-            throw new NotImplementedException();
+            int[] answers = new int[numberToGet];
+
+            return answers;
         }
     }
 }
