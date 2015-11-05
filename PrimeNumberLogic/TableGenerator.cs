@@ -51,6 +51,7 @@ namespace PrimeNumberLogic
                 answer[i, 0] = answer[0, i] = currentnumber;
             }
 
+            //walk down the central diagonal of the table setting across and down from this point (since they are mirror of one another)
             int centerlinePosition = 1;
             while(centerlinePosition < nPlusOne)
             {

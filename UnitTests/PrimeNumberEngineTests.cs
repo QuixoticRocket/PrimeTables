@@ -20,7 +20,7 @@ namespace UnitTests
             Mock<INumberGenerator> numberGenerator = new Mock<INumberGenerator>(MockBehavior.Strict);
             Mock<TableGenerator> tableGenerator = new Mock<TableGenerator>(MockBehavior.Strict);
 
-            IPrimeNumberEngine engine = new IPrimeNumberEngine();
+            PrimeNumberEngine engine = new PrimeNumberEngine();
 
             engine.numberGenerator = numberGenerator.Object;
             engine.tableGenerator = tableGenerator.Object;

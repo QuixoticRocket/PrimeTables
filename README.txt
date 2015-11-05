@@ -1,4 +1,4 @@
-Look at the requirements ad get an idea of what project setup we will require.
+Look at the requirements and get an idea of what project setup we will require.
 We will need a test project.
 We will use a console app as the display layer for capturing input and displaying output. This can be switched to another display layer at a later point, maybe.
 All our logic is likely to reside in the PrimeNumberLogic layer.
@@ -54,9 +54,11 @@ Run it and follow the instructions. (supply a number, see results, exit with key
 I am pleased with my implementation of finding the prime numbers and how close I came to existing seiving algorithms.
 I like the overall seperation of concerns and the general architecture. I could have simplified things by not interfacing the NumberGenerator, 
 but i like the decoupling between it and the TableGenerator.
+I also am please how i work the multiplication table by walking down the centeral diagonal working on a smaller and small remaining space.
 
 If I were to improve things further:
 Implementing some of the ideas mentioned in the refactoring section above.
 If we would need to extend this then look at creating a shared logic section for interfaces and breaking out the generators into their own services / assemblies.
 Then we could use some IoC containers or perhaps some sort of strategy pattern for selecting generators and combingin them for results.
 Better front-end. Consoles are quick and easy and so useful for demos and prototypes, but they're not the best user experience.
+I might also add more tests on larger datasets just to make sure that the methods are workign at both ends of where we'd be using them
