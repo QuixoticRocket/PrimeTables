@@ -16,7 +16,9 @@ namespace PrimeNumberLogic
 
         private INumberGenerator numberGenerator;
 
-        //strictly for mocking
+        /// <summary>
+        /// Strictly for MOCKING in tests. Use the other constructor
+        /// </summary>
         internal TableGenerator()
         {
             this.numberGenerator = null;
