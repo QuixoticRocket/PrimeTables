@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PrimeNumberLogic;
 
 namespace UnitTests
 {
@@ -10,11 +11,17 @@ namespace UnitTests
         //what are our boundries? is there such a thing as a negative prime? 
         //edge cases? we cannot generate a negative amount of numbers. generating 0 number will result in an empty return.
 
+        //PRIME NUMBER DEFINITION:
+        //A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+
         [TestMethod]
-        [Ignore]
-        public void TestMethod1()
+        public void Test_n0_returnsEmpty()
         {
-            Assert.Fail();
+            //generate zero numbers means empty list
+
+            PrimeNumberGenerator generator = new PrimeNumberGenerator();
+            var answer = generator.GetNumbers(0);
+            Assert.AreEqual(0, answer.Length);
         }
     }
 }

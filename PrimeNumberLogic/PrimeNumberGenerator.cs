@@ -10,5 +10,9 @@ namespace PrimeNumberLogic
     internal class PrimeNumberGenerator : INumberGenerator
     {
         //generates prime numbers
+        public int[] GetNumbers(uint numberToGet)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
