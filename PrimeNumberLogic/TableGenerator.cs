@@ -16,12 +16,19 @@ namespace PrimeNumberLogic
 
         private INumberGenerator numberGenerator;
 
-        public TableGenerator(INumberGenerator numberGenerator)
+        //strictly for mocking
+        internal TableGenerator()
+        {
+            this.numberGenerator = null;
+        }
+
+        internal TableGenerator(INumberGenerator numberGenerator)
         {
             this.numberGenerator = numberGenerator;
         }
 
-        public int?[,] GetMultiplicationTable(uint n)
+        //this is only virtual so that we can mock it for testing. do not override
+        internal virtual int?[,] GetMultiplicationTable(uint n)
         {
             if(n == 0)
             {
