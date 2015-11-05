@@ -21,6 +21,10 @@ namespace PrimeNumberLogic
 
         public int[,] GetMultiplicationTable(uint n)
         {
+            if(n == 0)
+            {
+                throw new ArgumentOutOfRangeException("n must be 1 or greater");
+            }
             throw new NotImplementedException();
         }
     }
