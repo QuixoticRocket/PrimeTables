@@ -26,8 +26,19 @@ namespace PrimeNumberLogic
                 }
                 else
                 {
-                    //more complicated code for finding primes here (we can't just map case statement to a list of prime ;)
-                    throw new NotImplementedException();
+                    int candidate = foundPrimes[foundPrimes.Count - 1] +1;
+                    while(foundprime == 0)
+                    {
+                        foreach (int prime in foundPrimes)
+                        {
+                            if(candidate % prime == 0)
+                            {
+                                candidate++;
+                                continue;
+                            }
+                        }
+                        foundprime = candidate;
+                    }
                 }
 
                 foundPrimes.Add(foundprime);
