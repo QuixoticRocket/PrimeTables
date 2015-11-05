@@ -34,3 +34,13 @@ answer array example for pattern (not using primes)
 4  8  12  16  20  28
 5 10  15  20  25  35
 7 14  21  28  35  49
+
+---
+REFACTORING:
+Thinking about how I could make the prime number generation faster, I see that my approach is somewhat similar to the Sieve of Eratosthenes.
+https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes - lovely animated gif showing how it works.
+There are a few other sieves and various methods for producing large primes. Once we get to a certain point we will need to return longs and not ints.
+Even returning uints would increase our range slightly.
+But i've tested my code with 1000 primes and it is responsive and does not crash.
+However we could do some unchecked assignment and then test for overflow to see if we've gone past our limit.
+These are just some ideas if we were to move forward.
