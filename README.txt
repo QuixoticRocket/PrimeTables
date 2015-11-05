@@ -25,3 +25,12 @@ We will use Moq framework here. this means we may need to make some classes virt
 We will need to expose internal methods to the appropriate assemblies for testing.
 
 ---
+
+answer array example for pattern (not using primes)
+
+ | 2 | 3 | 4 | 5 | 7 |
+2  4   6   8  10  14
+3  6   9  12  15  21  
+4  8  12  16  20  28
+5 10  15  20  25  35
+7 14  21  28  35  49
