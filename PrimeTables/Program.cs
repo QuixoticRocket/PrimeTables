@@ -1,4 +1,5 @@
 ﻿using PrimeNumberLogic;
+using PrimeNumberLogic.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace PrimeTables
                 int.TryParse(input, out n);
             }
 
-            PrimeNumberEngine engine = new PrimeNumberEngine();
+            ITableEngine engine = new PrimeNumberEngine();
             int?[,] output = engine.GenerateTable((uint)n);
 
             //output
