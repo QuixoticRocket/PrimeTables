@@ -33,5 +33,20 @@ namespace UnitTests
             var answer = generator.GetNumbers(1);
             Assert.AreEqual(2, answer[0]);
         }
+
+        [TestMethod]
+        public void Test_n5_returns_correct()
+        {
+            //first primes are 2, 3, 5, 7, 11
+
+            PrimeNumberGenerator generator = new PrimeNumberGenerator();
+            var answer = generator.GetNumbers(5);
+            Assert.AreEqual(5, answer.Length);
+            Assert.AreEqual(2, answer[0]);
+            Assert.AreEqual(3, answer[1]);
+            Assert.AreEqual(5, answer[2]);
+            Assert.AreEqual(7, answer[3]);
+            Assert.AreEqual(11, answer[4]);
+        }
     }
 }
