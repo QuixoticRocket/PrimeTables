@@ -19,7 +19,7 @@ namespace PrimeNumberLogic
 
         }
 
-        public int[,] GetMultiplicationTable(uint n)
+        public int?[,] GetMultiplicationTable(uint n)
         {
             if(n == 0)
             {

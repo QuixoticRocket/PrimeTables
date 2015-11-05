@@ -29,5 +29,25 @@ namespace UnitTests
                 Assert.IsInstanceOfType(ex, typeof(ArgumentOutOfRangeException));
             }
         }
+
+        [TestMethod]
+        public void N1_SmallTable()
+        {
+            Mock<INumberGenerator> numberGenerator = new Mock<INumberGenerator>(MockBehavior.Strict);
+            TableGenerator generator = new TableGenerator(numberGenerator.Object);
+
+            int[] numbers = new int[] { 3 };
+            numberGenerator.Setup(x => x.GetNumbers(1)).Returns(numbers).Verifiable();
+
+            var answer = generator.GetMultiplicationTable(1);
+
+            Assert.AreEqual(2 * 2, answer.Length);
+            Assert.IsNull(answer[0, 0]);
+            Assert.AreEqual(3, answer[0, 1].Value);
+            Assert.AreEqual(3, answer[1, 0].Value);
+            Assert.AreEqual(3*3, answer[1, 1].Value);
+
+            numberGenerator.VerifyAll();
+        }
     }
 }
