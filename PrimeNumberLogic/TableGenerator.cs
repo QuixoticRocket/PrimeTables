@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrimeNumberLogic.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,5 +13,15 @@ namespace PrimeNumberLogic
         //this class could be interfaced so that we could switch out the types of tables we generate, but it's overkill for this project
 
         //requirements state: N is a whole number and N is at least one. so we should use an unsigned int, and we should check for 0 (edge case)
+
+        public TableGenerator(INumberGenerator numberGenerator)
+        {
+
+        }
+
+        public int[,] GetMultiplicationTable(uint n)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
