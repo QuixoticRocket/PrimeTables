@@ -44,3 +44,19 @@ Even returning uints would increase our range slightly.
 But i've tested my code with 1000 primes and it is responsive and does not crash.
 However we could do some unchecked assignment and then test for overflow to see if we've gone past our limit.
 These are just some ideas if we were to move forward.
+
+---
+INSTRUCTIONS AND ANSWERS TO QUESTIONS:
+
+This is a simple console application.
+Run it and follow the instructions. (supply a number, see results, exit with keypress).
+
+I am pleased with my implementation of finding the prime numbers and how close I came to existing seiving algorithms.
+I like the overall seperation of concerns and the general architecture. I could have simplified things by not interfacing the NumberGenerator, 
+but i like the decoupling between it and the TableGenerator.
+
+If I were to improve things further:
+Implementing some of the ideas mentioned in the refactoring section above.
+If we would need to extend this then look at creating a shared logic section for interfaces and breaking out the generators into their own services / assemblies.
+Then we could use some IoC containers or perhaps some sort of strategy pattern for selecting generators and combingin them for results.
+Better front-end. Consoles are quick and easy and so useful for demos and prototypes, but they're not the best user experience.
